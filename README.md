@@ -9,6 +9,8 @@ hence they must be scraped.
 
 PlugLoggerWithMeta makes them machine readable by exporting them using Logger.metadata.
 
+There are also other similar libraries, however this tries to behave as close as possible to `Plug.Logger`.
+
 ## Installation
 - Add `:plug_logger_with_meta` dependency to your project's `mix.exs`:
 
