@@ -1,27 +1,29 @@
-# PlugMetadataLogger
+# PlugLoggerWithMeta
 
-PlugMetadataLogger is a [Plug.Logger](https://hexdocs.pm/plug/Plug.Logger.html) based on Plug.Logger code, focused on metadata logging.
+PlugLoggerWithMeta is a [Plug.Logger](https://hexdocs.pm/plug/Plug.Logger.html) based on Plug.Logger code, focused on metadata logging.
 
 ## Why
 Plug.Logger does not use [Logger.metadata](https://hexdocs.pm/logger/Logger.html#metadata/1),
 so some useful information such as `method` and `request_path` are embedded into the log message
 hence they must be scraped.
 
-PlugMetadataLogger makes them machine readable by exporting them using Logger.metadata.
+PlugLoggerWithMeta makes them machine readable by exporting them using Logger.metadata.
+
+There are also other similar libraries, however this tries to behave as close as possible to `Plug.Logger`.
 
 ## Installation
-- Add `:plug_metadata_logger` dependency to your project's `mix.exs`:
+- Add `:plug_logger_with_meta` dependency to your project's `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:plug_metadata_logger, "~> 0.1"}
+    {:plug_logger_with_meta, "~> 0.1"}
   ]
 end
 ```
 - Run `mix deps.get`
 
-- Replace `Plug.Logger` with `PlugMetadataLogger`:
+- Replace `Plug.Logger` with `PlugLoggerWithMeta`:
 
 ```diff
 --- a/endpoint.ex
@@ -31,7 +33,7 @@ end
  
    plug Plug.RequestId
 -  plug Plug.Logger
-+  plug PlugMetadataLogger
++  plug PlugLoggerWithMeta
 ```
 
 - Add relevant metadata to your logger configuration:
