@@ -1,4 +1,4 @@
-defmodule PlugMetadataLogger do
+defmodule PlugLoggerWithMeta do
   @moduledoc """
   A plug for logging basic request information in the format:
 

@@ -1,16 +1,16 @@
-defmodule PlugMetadataLogger.MixProject do
+defmodule PlugLoggerWithMeta.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :plug_metadata_logger,
+      app: :plug_logger_with_meta,
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       description: description(),
       package: package(),
-      source_url: "https://github.com/ispirata/plug_metadata_logger"
+      source_url: "https://github.com/ispirata/plug_logger_with_meta"
     ]
   end
 
@@ -34,8 +34,8 @@ defmodule PlugMetadataLogger.MixProject do
       maintainers: ["Davide Bettio"],
       licenses: ["Apache-2.0"],
       links: %{
-        "GitHub" => "https://github.com/ispirata/plug_metadata_logger",
-        "Documentation" => "http://hexdocs.pm/plug_metadata_logger/"
+        "GitHub" => "https://github.com/ispirata/plug_logger_with_meta",
+        "Documentation" => "http://hexdocs.pm/plug_logger_with_meta/"
       }
     ]
   end

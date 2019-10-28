@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure your application as:
 #
-#     config :plug_metadata_logger, key: :value
+#     config :plug_logger_with_meta, key: :value
 #
 # and access this configuration in your application as:
 #
-#     Application.get_env(:plug_metadata_logger, :key)
+#     Application.get_env(:plug_logger_with_meta, :key)
 #
 # You can also configure a third-party app:
 #
