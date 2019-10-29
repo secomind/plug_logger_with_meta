@@ -3,11 +3,11 @@
 PlugLoggerWithMeta is a [Plug.Logger](https://hexdocs.pm/plug/Plug.Logger.html) based on Plug.Logger code, focused on metadata logging.
 
 ## Why
-Plug.Logger does not use [Logger.metadata](https://hexdocs.pm/logger/Logger.html#metadata/1),
+Plug.Logger does not use [Logger metadata](https://hexdocs.pm/logger/Logger.html#module-metadata),
 so some useful information such as `method` and `request_path` are embedded into the log message
 hence they must be scraped.
 
-PlugLoggerWithMeta makes them machine readable by exporting them using Logger.metadata.
+PlugLoggerWithMeta makes them machine readable by exporting them using standard Logger metadata mechanisms.
 
 There are also other similar libraries, however this tries to behave as close as possible to `Plug.Logger`.
 
